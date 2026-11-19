@@ -2,6 +2,7 @@ import re
 from dataclasses import dataclass
 
 HEADING = re.compile(r"^(\d+(?:\.\d+)*)\.\s+(\S.*)$")
+APPENDIX = re.compile(r"^APPENDIX\s+[A-Z]:")
 
 
 @dataclass
@@ -27,6 +28,11 @@ def chunk_rfc(path, rfc_number):
             line = line.rstrip("\n")
             if "[Page" in line:  # skip page furniture
                 continue
+            if APPENDIX.match(line) and "..." not in line:
+                flush()
+                current = None 
+                body = []
+                continue
             m = HEADING.match(line)
             if m and "..." not in line:  # skip table-of-contents lines
                 flush()
@@ -36,3 +42,4 @@ def chunk_rfc(path, rfc_number):
                 body.append(line)
     flush()
     return chunks
+
