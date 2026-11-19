@@ -1,0 +1,26 @@
+Network Working Group                                         J. Postel
+Request for Comments: 9999                                          ISI
+                                                          September 1981
+
+                          Sample Protocol Specification
+
+Table of Contents
+
+   1.  Introduction ..............................................  1
+   3.  Specification .............................................  2
+
+1.  Introduction
+
+   This is a synthetic fixture used only to test the parser.
+
+                                                                [Page 1]
+
+3.  Specification
+
+   Overview text for the specification.
+
+3.1.  Internet Header Format
+
+   The header carries a time to live field.
+
+                                                                [Page 2]
