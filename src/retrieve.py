@@ -1,9 +1,12 @@
 import re
 from rank_bm25 import BM25Okapi
+from nltk.stem import PorterStemmer
+
+_stemmer = PorterStemmer()
 
 
 def tokenize(text):
-    return re.findall(r"[a-z0-9]+", text.lower())
+    return [_stemmer.stem(t) for t in re.findall(r"[a-z0-9]+", text.lower())]
 
 
 class BM25Retriever:
@@ -15,3 +18,4 @@ class BM25Retriever:
         scores = self.bm25.get_scores(tokenize(query))
         ranked = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)
         return [self.chunks[i] for i in ranked[:k]]
+
