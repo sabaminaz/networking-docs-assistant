@@ -23,6 +23,10 @@ Linux man pages, with answers grounded in cited sections.
 
 ## Results
 
-Baseline (BM25, k=5), evaluated 2026-11-19: recall@5 = 15/16 (0.94) on 16 answerable questions.
-Four unanswerable questions are in the evaluation set but are not scored, since abstention needs the generation step.
-Porter stemming (added in a later commit): recall@5 = 15/16 (0.94), unchanged.
+Retrieval comparison, 16 answerable questions, recall@5 (evaluated 2026-11-19):
+- BM25 with Porter stemming: 15/16
+- Dense (bge-small-en-v1.5, 200-word passages): 14/16
+- Hybrid (reciprocal rank fusion of BM25 and dense): 16/16
+
+A 16-question set is small, so one question changes the score by about 6 points.
+Hybrid covered the misses of both methods: dense caught the gateway question that BM25 missed, while BM25 caught the Protocol field and Flags questions that dense missed.
