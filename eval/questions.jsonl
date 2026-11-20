@@ -1,0 +1,20 @@
+{"question": "What header field limits how many hops a datagram can take?", "section": "3.1"}
+{"question": "What does the Protocol field indicate?", "section": "3.1"}
+{"question": "What unit is the Total Length field measured in?", "section": "3.1"}
+{"question": "What does the Identification field identify?", "section": "3.1"}
+{"question": "What do the Flags control?", "section": "3.1"}
+{"question": "What unit is the Fragment Offset measured in?", "section": "3.1"}
+{"question": "What does the Type of Service field specify?", "section": "3.1"}
+{"question": "How many bits long is the Source Address field?", "section": "3.1"}
+{"question": "Over which part of the datagram is the header checksum computed?", "section": "3.1"}
+{"question": "What does the Internet Header Length field measure?", "section": "3.1"}
+{"question": "What does the Version field identify?", "section": "3.1"}
+{"question": "What is the purpose of the Options field?", "section": "3.1"}
+{"question": "What is the Internet Protocol's relation to TCP?", "section": "2.1"}
+{"question": "What does a gateway do in the Internet?", "section": "2.4"}
+{"question": "What is the Internet Protocol's model of operation?", "section": "2.2"}
+{"question": "How does the Internet Protocol handle data too large for a network?", "section": "2.3"}
+{"question": "What port number does SSH use?", "section": null}
+{"question": "What is the capital of France?", "section": null}
+{"question": "How does HTTP/2 multiplexing work?", "section": null}
+{"question": "What is the maximum transfer rate of a fiber link?", "section": null}
